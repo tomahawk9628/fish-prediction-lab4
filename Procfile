@@ -1,1 +1,0 @@
-web : gunicorn fish-prediction-lab4:app
