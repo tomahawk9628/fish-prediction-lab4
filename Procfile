@@ -1,0 +1,1 @@
+web : gunicorn assignment_4:app
