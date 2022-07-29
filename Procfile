@@ -1,1 +1,1 @@
-web : gunicorn app.py app:app
+web : gunicorn fish-prediction-lab4:app
