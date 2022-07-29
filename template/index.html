@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Fish Prediction</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="static/css/nunito-font.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="static/css/style.css"/>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body class="form-v9">
+	<div class="page-content">
+		<div class="form-v9-content" style="background-image: url('static/images/form-v9.jpg')">
+			<form class="form-detail" action="{{url_for('predict')}}" method="post">
+				<h2>Fish Prediction</h2>
+				<div class="form-row-total">
+					<div class="form-row">
+						<input type="text" name="Weight" id="Weight" class="input-text" placeholder="Weight" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="Length1" id="Length1" class="input-text" placeholder="Length1" required>
+					</div>
+				</div>
+				<div class="form-row-total">
+					<div class="form-row">
+						<input type="text" name="Length2" id="Length2" class="input-text" placeholder="Length2" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="Length3" id="Length3" class="input-text" placeholder="Length3" required>
+					</div>
+				</div>
+				<div class="form-row-total">
+					<div class="form-row">
+						<input type="text" name="Height" id="Height" class="input-text" placeholder="Height" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="Width" id="Width" class="input-text" placeholder="Width" required>
+					</div>
+				</div>
+				<div class="form-row-last">
+					<button type="submit" class="btn btn-primary btn-lg">Predict</button>
+				</div>
+			</form>
+			<div class="alert alert-success alert-dismissible d-flex align-items-center fade show">
+				<i class="bi-check-circle-fill"></i>
+				<strong class="mx-2">Success!</strong> <h3>{{ prediction_text }} </h3>
+				<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
